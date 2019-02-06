@@ -1,3 +1,23 @@
-<p>
-  footer works!
-</p>
+<div nz-row>
+  <div nz-col nzSpan='5' nzOffset='3' style="margin-top:10px">
+    <i nz-icon [theme]="'twotone'" [twoToneColor]="'red'" [type]="'left-circle'" style="font-size: 30px;margin-left: 10px"></i>
+    <i nz-icon [theme]="'twotone'" [twoToneColor]="'red'" [type]="playState" style="font-size: 35px;margin-left: 10px" (click)="changePlayState()"></i>
+    <i nz-icon [theme]="'twotone'" [twoToneColor]="'red'" [type]="'right-circle'" style="font-size: 30px;margin-left: 10px" (click)="next()"></i>
+  </div>
+  <div nz-col nzSpan='10' style="margin-top:15px">
+    <div nz-row >
+        <label nz-col nzSpan='2'>00:00</label>
+        <nz-progress nz-col nzSpan='20' [nzPercent]="50" [nzStrokeColor]="'red'" [nzShowInfo]="false"></nz-progress>
+        <label nz-col nzSpan='2'>04:00</label>
+    </div>  
+  </div>
+  <div  nz-col nzSpan='4' nzOffset='2' style="margin-top:15px">
+    <div nz-row>
+        <i  nz-col nzSpan='2' nz-icon [type]="'sound'" style="font-size:20px"></i>
+        <nz-progress nz-col nzSpan='10'  [nzPercent]="50" [nzStrokeColor]="'red'" [nzShowInfo]="false"></nz-progress>
+        <i  nz-col nzSpan='2' nzOffset='2' nz-icon [type]="'align-left'" style="font-size:20px"></i>
+    </div>
+     
+  </div>
+ 
+</div>

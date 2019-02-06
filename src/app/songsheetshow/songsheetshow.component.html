@@ -1,0 +1,75 @@
+<div nz-row>
+  <div nz-col nzSpan="5">
+    <img src="http://img.kj-cy.cn/uploads/litimg/20161217/1481956451678654.jpg" style="width: 300px;height:300px;">
+  </div>
+
+  <div nz-col nzSpan="18">
+    <div>
+      <nz-tag [nzColor]="'red'">歌单</nz-tag>
+      <h2 style="display: inline;margin-left: 5px">{{playListDetail.name}}</h2>
+      <label style="float: right;">歌曲数</label>
+      <label style="float: right;margin-left: 5px">播放数</label>
+
+    </div>
+
+    <div style="margin-top:10px">
+      <nz-avatar nzIcon="user"></nz-avatar>
+      <label style="margin-left:10px">用户名</label>
+      <label style="margin-left:10px">2015-10-21</label>
+
+    </div>
+    <div style="margin-top:10px">
+      <button nz-button nzType="Primary">播放全部</button>
+      <button nz-button nzType="Primary" style="margin-left:10px">收藏</button>
+      <button nz-button nzType="Primary" style="margin-left:10px">分享</button>
+    </div>
+
+    <div style="margin-top:10px;">
+      <label style="margin-right:5px">标签:</label>
+      <nz-tag [nzColor]="'red'">标签1</nz-tag>
+      <nz-tag [nzColor]="'red'">标签2</nz-tag>
+    </div>
+    <div style="margin-top:10px;">
+      <label>简介：</label>
+      <p>这个人很懒，什么都没写~</p>
+    </div>
+
+
+  </div>
+
+
+</div>
+<div style="margin-top:10px">
+  <nz-tabset>
+    <nz-tab nzTitle="歌曲列表">
+      <div>
+        <nz-table #basicTable >
+          <thead>
+            <tr>
+              <th>音乐标题</th>
+              <th>歌手</th>
+              <th>专辑</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let song of songs">
+                <td>
+                    <a (click)="play(song.id)">播放</a>
+                  </td>
+              <td>{{song.name}}</td>
+              <td>{{song.ar[0].name}}</td>
+              <td>{{song.al.name}}</td>
+            </tr>
+          </tbody>
+        </nz-table>
+      </div>
+    </nz-tab>
+    <nz-tab nzTitle="评论">
+      Content of Tab Pane 2
+    </nz-tab>
+    <nz-tab nzTitle="收藏者">
+      Content of Tab Pane 3
+    </nz-tab>
+  </nz-tabset>
+
+</div>

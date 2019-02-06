@@ -1,39 +1,45 @@
-<nz-layout>
+<nz-layout style="height:94%">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
-   <app-sider></app-sider>
+    <app-sider></app-sider>
   </nz-sider>
   <nz-layout>
     <nz-header style="background: #fff; padding:0;">
-      
-      <ul nz-menu  [nzMode]="'horizontal'">
-          <li nz-menu-item><i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i></li>
-          <li nz-menu-item style="margin-bottom: 10px">
-              <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
-                  <input type="text" nz-input placeholder="input search text">
-                </nz-input-group>
-                <ng-template #suffixIconButton>
-                  <button nz-button nzType="primary" nzSearch><i nz-icon type="search"></i></button>
-                </ng-template>
-          </li>
-          <li nz-menu-item style="float:right;" >消息</li>
-          <li nz-menu-item style="float:right;margin-right: 10px" > <nz-avatar nzText="USER"></nz-avatar></li>
-        
+
+      <ul nz-menu [nzMode]="'horizontal'">
+        <li nz-menu-item><i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i></li>
+        <li nz-menu-item style="margin-bottom: 10px">
+          <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
+            <input type="text" nz-input placeholder="input search text" [(ngModel)]="songName">
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" nzSearch (click)="searchSong()"><i nz-icon type="search" ></i></button>
+          </ng-template>
+        </li>
+        <li nz-menu-item style="float:right;">消息</li>
+        <li nz-menu-item style="float:right;margin-right: 10px">
+          <nz-avatar nzText="USER"></nz-avatar>
+        </li>
+
       </ul>
-      
-      
-       
 
 
-     
+
+
+
+
     </nz-header>
     <nz-content style="margin:0 16px;">
       <div style="padding:24px; background: #fff; min-height: 360px; margin-top: 10px">
-        <app-songsheet></app-songsheet>
+        <router-outlet></router-outlet>
       </div>
     </nz-content>
-    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+
   </nz-layout>
 </nz-layout>
+<div class="footer" style="height:6%">
+  <app-footer></app-footer>
+</div>
+
 <ng-template #trigger>
   <i nz-icon type="up"></i>
 </ng-template>

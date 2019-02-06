@@ -1,15 +1,47 @@
 <h3>编辑歌单信息</h3>
 <nz-divider></nz-divider>
-<div>
-  <label>歌单名:</label>
-  <input nz-input placeholder="歌单名" >
-  <label>标签:</label>
-  <button nz-button nzType="default">添加</button>
-  <label>简介</label>
-  <textarea nz-input placeholder="请输入简介" ngModel nzAutosize></textarea>
-  <button nz-button nzType="primary">保存</button>
-  <button nz-button nzType="danger">取消</button>
-</div>
-<div>
-    <img src="">
+
+<div nz-row>
+  <div nz-col nzSpan="16">
+    <div nz-row style="margin-top:20px;">
+      <label nz-col nzSpan="2" style="margin-top: 5px;">歌单名称:</label>
+      <div nz-col nzSpan="10">
+        <input nz-input placeholder="歌单名称">
+      </div>
+    </div>
+
+    <div nz-row style="margin-top:20px;">
+      <label nz-col nzSpan="2" style="margin-top: 5px;">标签:</label>
+      <div nz-col nzSpan="10">
+        <button nz-button nzType="default">添加标签</button>
+      </div>
+    </div>
+
+
+    <div nz-row style="margin-top:20px;">
+      <label nz-col nzSpan="2" style="margin-top: 5px;">简介:</label>
+      <div nz-col nzSpan="10">
+        <textarea nz-input placeholder="简介"></textarea>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div nz-col nzSpan="8">
+    <img src="http://img.kj-cy.cn/uploads/litimg/20161217/1481956451678654.jpg" style="height:300px;width:300px;">
+
+  </div>
+  <button nz-button nzType="default" style="margin-top:20px;margin-left: 73%">修改封面</button>
+
+  <div nz-row style="margin-top:40px;">
+    <div nz-col nzSpan="2" nzOffset="2">
+      <button nz-button nzType="primary">保存</button>
+    </div>
+    <div nz-col nzSpan="2" nzOffset="2">
+      <button nz-button nzType="danger">取消</button>
+    </div>
+
+  </div>
+
 </div>

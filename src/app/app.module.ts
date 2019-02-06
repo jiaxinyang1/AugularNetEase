@@ -13,7 +13,9 @@ import { SiderComponent } from './sider/sider.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { SongsheetComponent } from './songsheet/songsheet.component';
-
+import { SongsheetshowComponent } from './songsheetshow/songsheetshow.component';
+import { UserinfoshowComponent } from './userinfoshow/userinfoshow.component';
+import { SearchmusicComponent } from './searchmusic/searchmusic.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -22,7 +24,10 @@ registerLocaleData(en);
     SiderComponent,
     MainComponent,
     FooterComponent,
-    SongsheetComponent
+    SongsheetComponent,
+    SongsheetshowComponent,
+    UserinfoshowComponent,
+    SearchmusicComponent
   ],
   imports: [
     BrowserModule,
